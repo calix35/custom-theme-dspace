@@ -6,7 +6,7 @@ import {
 @Component({
   selector: 'ds-register-email-form',
   // templateUrl: './register-email-form.component.html',
-  templateUrl: '../../../../app/register-email-form/register-email-form.component.html',
+  templateUrl: './register-email-form.component.html',
 })
 export class RegisterEmailFormComponent extends BaseComponent {
 }

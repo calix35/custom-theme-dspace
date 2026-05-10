@@ -7,9 +7,9 @@ import { ConfigurationSearchPageComponent as BaseComponent } from '../../../../a
 @Component({
   selector: 'ds-configuration-search-page',
   // styleUrls: ['./configuration-search-page.component.scss'],
-  styleUrls: ['../../../../app/shared/search/search.component.scss'],
+  styleUrls: ['./search.component.scss'],
   // templateUrl: './configuration-search-page.component.html'
-  templateUrl: '../../../../app/shared/search/search.component.html',
+  templateUrl: './search.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [pushInOut],
   providers: [

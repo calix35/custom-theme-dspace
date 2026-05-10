@@ -5,9 +5,9 @@ import { RootComponent as BaseComponent } from '../../../../app/root/root.compon
 @Component({
   selector: 'ds-root',
   // styleUrls: ['./root.component.scss'],
-  styleUrls: ['../../../../app/root/root.component.scss'],
+  styleUrls: ['./root.component.scss'],
   // templateUrl: './root.component.html',
-  templateUrl: '../../../../app/root/root.component.html',
+  templateUrl: './root.component.html',
   animations: [slideSidebarPadding],
 })
 export class RootComponent extends BaseComponent {

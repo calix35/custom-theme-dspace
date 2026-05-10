@@ -6,9 +6,9 @@ import { fadeIn, fadeInOut } from '../../../../app/shared/animations/fade';
 @Component({
   selector: 'ds-collection-page',
   // templateUrl: './collection-page.component.html',
-  templateUrl: '../../../../app/collection-page/collection-page.component.html',
+  templateUrl: './collection-page.component.html',
   // styleUrls: ['./collection-page.component.scss']
-  styleUrls: ['../../../../app/collection-page/collection-page.component.scss'],
+  styleUrls: ['./collection-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     fadeIn,
