@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" role="img" aria-labelledby="title desc">
+  <title id="title">Repositorio FIC UAT</title>
+  <desc id="desc">Identificador visual para el Repositorio de la Facultad de Ingenieria y Ciencias de la Universidad Autonoma de Tamaulipas.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0C4467"/>
+      <stop offset="1" stop-color="#779FB6"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="134" height="134" rx="18" fill="#fff" stroke="#E4E8EA" stroke-width="4"/>
+  <path d="M48 38h48c15 0 27 12 27 27v48H75c-15 0-27-12-27-27V38z" fill="url(#g)"/>
+  <path d="M62 52h31c8 0 15 7 15 15v31H77c-8 0-15-7-15-15V52z" fill="#fff" opacity=".92"/>
+  <path d="M75 66h16c3 0 5 2 5 5v16H80c-3 0-5-2-5-5V66z" fill="#BA6124"/>
+  <path d="M40 118h72" stroke="#BA6124" stroke-width="7" stroke-linecap="round"/>
+  <path d="M44 102h32" stroke="#ECB06F" stroke-width="7" stroke-linecap="round"/>
+  <text x="165" y="58" fill="#0C4467" font-family="Lato, Arial, sans-serif" font-size="31" font-weight="900">Repositorio FIC</text>
+  <text x="165" y="93" fill="#24333D" font-family="Lato, Arial, sans-serif" font-size="20" font-weight="700">Facultad de Ingenieria y Ciencias</text>
+  <text x="165" y="120" fill="#6B747B" font-family="Lato, Arial, sans-serif" font-size="17" font-weight="700">Universidad Autonoma de Tamaulipas</text>
+</svg>

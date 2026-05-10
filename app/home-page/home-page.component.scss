@@ -1,0 +1,138 @@
+:host {
+  display: block;
+  background: #F7FAF8;
+}
+
+.fic-home {
+  color: #24333D;
+}
+
+.fic-intro-section,
+.fic-repository-section,
+.fic-recent-section {
+  padding: clamp(2.6rem, 5vw, 4.75rem) 0;
+}
+
+.fic-section-heading {
+  max-width: 760px;
+  margin-bottom: 1.7rem;
+
+  span {
+    color: #2B7A4D;
+    display: block;
+    font-size: .82rem;
+    font-weight: 900;
+    letter-spacing: .12em;
+    margin-bottom: .6rem;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: #1f2c34;
+    font-size: clamp(1.8rem, 3vw, 2.75rem);
+    font-weight: 900;
+    line-height: 1.08;
+    margin: 0;
+  }
+}
+
+.fic-feature-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  article {
+    background: #fff;
+    border: 1px solid rgba(36, 51, 61, .14);
+    border-top: 4px solid #2B7A4D;
+    min-height: 230px;
+    padding: 1.45rem;
+    box-shadow: 0 12px 24px rgba(20, 32, 40, .06);
+  }
+
+  h3 {
+    color: #1f2c34;
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin: 1rem 0 .65rem;
+  }
+
+  p {
+    color: #52616A;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+.fic-feature-icon {
+  align-items: center;
+  background: #eef5f1;
+  border: 1px solid rgba(43, 122, 77, .24);
+  color: #2B7A4D;
+  display: inline-flex;
+  font-size: 1.35rem;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.fic-repository-section {
+  background: #fff;
+  border-top: 1px solid rgba(36, 51, 61, .08);
+  border-bottom: 1px solid rgba(36, 51, 61, .08);
+  color: #24333D;
+}
+
+.fic-repository-layout {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: minmax(260px, .85fr) minmax(0, 1.4fr);
+  align-items: start;
+}
+
+.fic-repository-callout {
+  border-left: 4px solid #2B7A4D;
+  padding: .5rem 0 .5rem 1.25rem;
+
+  span {
+    color: #2B7A4D;
+    display: block;
+    font-size: .78rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    margin-bottom: .7rem;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: #1f2c34;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin: 0 0 1rem;
+  }
+
+  p {
+    color: #4f6069;
+    line-height: 1.6;
+  }
+}
+
+.fic-repository-content {
+  background: #fcfdfc;
+  border: 1px solid rgba(36, 51, 61, .12);
+  color: #24333D;
+  padding: 1.4rem;
+  box-shadow: 0 10px 22px rgba(20, 32, 40, .05);
+}
+
+.fic-recent-section {
+  background: #fff;
+}
+
+@include media-breakpoint-down(md) {
+  .fic-feature-grid,
+  .fic-repository-layout {
+    grid-template-columns: 1fr;
+  }
+}

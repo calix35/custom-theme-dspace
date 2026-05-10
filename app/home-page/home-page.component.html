@@ -1,0 +1,52 @@
+<ds-themed-home-news></ds-themed-home-news>
+
+<main class="fic-home">
+  <section class="fic-intro-section">
+    <div class="container">
+      <div class="fic-section-heading">
+        <span>Repositorio academico</span>
+        <h2>Investigacion, docencia y conocimiento abierto de la FIC</h2>
+      </div>
+
+      <div class="fic-feature-grid">
+        <article>
+          <span class="fic-feature-icon fas fa-seedling" aria-hidden="true"></span>
+          <h3>Ciencias agropecuarias y ambientales</h3>
+          <p>Organiza materiales vinculados con sistemas productivos, conservacion ambiental y desarrollo sostenible.</p>
+        </article>
+        <article>
+          <span class="fic-feature-icon fas fa-network-wired" aria-hidden="true"></span>
+          <h3>Tecnologia, telematica y datos</h3>
+          <p>Da visibilidad a proyectos, tesis, articulos y recursos academicos de las areas tecnologicas de la Facultad.</p>
+        </article>
+        <article>
+          <span class="fic-feature-icon fas fa-university" aria-hidden="true"></span>
+          <h3>Memoria institucional</h3>
+          <p>Conserva y facilita el acceso a la produccion intelectual de estudiantes, docentes e investigadores.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="fic-repository-section">
+    <div class="container">
+      <div class="fic-repository-layout">
+        <aside class="fic-repository-callout">
+          <span>Explora</span>
+          <h2>Comunidades del repositorio</h2>
+          <p>Consulta las colecciones disponibles y navega los contenidos por comunidades academicas.</p>
+          <a class="btn btn-primary" routerLink="/community-list">Ver comunidades</a>
+        </aside>
+        <div class="fic-repository-content">
+          <ds-themed-top-level-community-list></ds-themed-top-level-community-list>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fic-recent-section" *ngIf="recentSubmissionspageSize>0">
+    <div class="container">
+      <ds-recent-item-list></ds-recent-item-list>
+    </div>
+  </section>
+</main>

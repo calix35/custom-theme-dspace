@@ -1,0 +1,39 @@
+<header id="fic-site-header">
+  <div class="fic-brand-strip">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between">
+      <a class="fic-brand" routerLink="/home" [attr.aria-label]="'home.title' | translate" role="button" tabindex="0">
+        <img src="assets/custom/images/fic-repository-logo.svg" alt="Repositorio FIC UAT">
+      </a>
+      <div class="fic-kicker d-none d-md-flex">
+        <span>Acceso abierto</span>
+        <span>Investigacion</span>
+        <span>Memoria academica</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="fic-nav-bar">
+    <div class="container d-flex flex-row flex-nowrap align-items-center justify-content-between">
+      <nav *ngIf="!(isMobile$ | async)" class="navbar navbar-expand p-0" [attr.aria-label]="'nav.main.description' | translate">
+        <ds-themed-navbar></ds-themed-navbar>
+      </nav>
+
+      <div class="fic-nav-actions ml-auto d-flex flex-row flex-nowrap align-items-center">
+        <ds-themed-search-navbar></ds-themed-search-navbar>
+        <ds-themed-lang-switch></ds-themed-lang-switch>
+        <ds-context-help-toggle></ds-context-help-toggle>
+        <ds-impersonate-navbar></ds-impersonate-navbar>
+        <ds-themed-auth-nav-menu></ds-themed-auth-nav-menu>
+
+        <button *ngIf="isMobile$ | async"
+                class="btn fic-menu-toggle ml-2"
+                type="button"
+                (click)="toggleNavbar()"
+                [attr.aria-label]="'nav.toggle' | translate"
+                aria-controls="collapsible-mobile-navbar">
+          <span class="fas fa-bars fa-fw toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

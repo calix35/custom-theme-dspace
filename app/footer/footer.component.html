@@ -1,0 +1,45 @@
+<footer class="fic-footer">
+  <div class="fic-footer__main">
+    <div class="container">
+      <div class="fic-footer__grid">
+        <section>
+          <img src="assets/images/fic-repository-logo.svg" alt="Repositorio FIC UAT">
+          <p>
+            Repositorio de la Facultad de Ingenieria y Ciencias de la Universidad Autonoma de Tamaulipas.
+          </p>
+        </section>
+
+        <section>
+          <h2>Contacto</h2>
+          <p>Centro Universitario Victoria</p>
+          <p>Telefono: (834) 318-17-18</p>
+          <p>Correo: fic@uat.edu.mx</p>
+        </section>
+
+        <section>
+          <h2>Enlaces</h2>
+          <ul>
+            <li><a routerLink="/community-list">Comunidades</a></li>
+            <li><a routerLink="/search">Busqueda avanzada</a></li>
+            <li><a routerLink="/statistics">Estadisticas</a></li>
+            <li *ngIf="showSendFeedback$ | async"><a routerLink="info/feedback">Comentarios</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="fic-footer__legal">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between">
+      <p>© {{ dateObj | date:'y' }} Facultad de Ingenieria y Ciencias, UAT</p>
+      <ul>
+        <li *ngIf="showCookieSettings">
+          <button class="btn btn-link" type="button" (click)="openCookieSettings()">{{ 'footer.link.cookies' | translate}}</button>
+        </li>
+        <li *ngIf="showPrivacyPolicy"><a routerLink="info/privacy">{{ 'footer.link.privacy-policy' | translate}}</a></li>
+        <li *ngIf="showEndUserAgreement"><a routerLink="info/end-user-agreement">{{ 'footer.link.end-user-agreement' | translate}}</a></li>
+        <li><a routerLink="info/accessibility">{{ 'footer.link.accessibility' | translate }}</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

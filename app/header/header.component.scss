@@ -1,0 +1,79 @@
+:host {
+  display: block;
+
+  #fic-site-header {
+    background: #fff;
+    border-bottom: 1px solid rgba(36, 51, 61, .12);
+    box-shadow: 0 7px 18px rgba(20, 32, 40, .05);
+    position: relative;
+    z-index: 10;
+
+    &::before {
+      background: #2B7A4D;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .fic-brand-strip {
+    padding: .95rem 0 .85rem;
+    background: #fff;
+  }
+
+  .fic-brand {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+
+    img {
+      display: block;
+      width: min(430px, 78vw);
+      max-height: 86px;
+    }
+  }
+
+  .fic-kicker {
+    gap: .6rem;
+
+    span {
+      border-left: 3px solid #2B7A4D;
+      color: #44555E;
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      line-height: 1;
+      padding-left: .55rem;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+
+  .fic-nav-bar {
+    background: #fff;
+    border-top: 1px solid rgba(36, 51, 61, .08);
+    min-height: 50px;
+  }
+
+  .navbar,
+  .fic-nav-actions {
+    gap: .4rem;
+    min-height: 50px;
+  }
+
+  .fic-menu-toggle {
+    color: #2d3d45;
+    border: 1px solid rgba(36, 51, 61, .25);
+    border-radius: 6px;
+
+    &:hover,
+    &:focus {
+      color: #2B7A4D;
+      border-color: #2B7A4D;
+      box-shadow: none;
+    }
+  }
+}
