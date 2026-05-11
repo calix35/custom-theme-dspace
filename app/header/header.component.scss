@@ -121,6 +121,12 @@
   }
 }
 
+.fic-mobile-nav {
+  background: #fff;
+  position: relative;
+  z-index: 19;
+}
+
 @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
   .fic-topbar {
     min-height: 50px;

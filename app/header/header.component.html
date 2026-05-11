@@ -15,7 +15,7 @@
   <div class="fic-nav-bar">
     <div class="container d-flex flex-row flex-nowrap align-items-center justify-content-between">
       <div class="fic-system-name" routerLink="/home">RIFIC</div>
-      <nav class="fic-main-nav">
+      <nav class="fic-main-nav" *ngIf="!(isMobile$ | async)">
         <ds-themed-navbar></ds-themed-navbar>
       </nav>
 
@@ -32,6 +32,12 @@
           <span class="fas fa-bars fa-fw toggler-icon" aria-hidden="true"></span>
         </button>
       </div>
+    </div>
+  </div>
+
+  <div class="fic-mobile-nav" *ngIf="isMobile$ | async">
+    <div class="container">
+      <ds-themed-navbar></ds-themed-navbar>
     </div>
   </div>
 </header>

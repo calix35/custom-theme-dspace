@@ -15,13 +15,13 @@
   /** Mobile menu styling **/
   @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
     .navbar {
-      width: 100vw;
+      width: 100%;
       background-color: #fff;
-      position: absolute;
-      overflow: hidden;
-      height: 0;
+      position: static;
+      overflow: visible;
+      height: auto;
+      min-height: 0;
       z-index: var(--ds-nav-z-index);
-      left: 0;
       box-shadow: 0 14px 28px rgba(20, 32, 40, .12);
 
       &.open {
@@ -29,6 +29,10 @@
         min-height: auto;
         border-bottom: 1px solid var(--fic-menu-dropdown-border);
       }
+    }
+
+    .navbar:not(.open) {
+      display: none;
     }
 
     .navbar.navbar-container {
