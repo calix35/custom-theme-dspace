@@ -1,7 +1,7 @@
 {
   // DSpace default: "All of DSpace"
-  "menu.section.browse_global": "Explore RIFIC",
-  "nav.browse.header": "Explore RIFIC",
+  "menu.section.browse_global": "Explorar RIFIC",
+  "nav.browse.header": "Explorar RIFIC",
 
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "RIFIC :: ",

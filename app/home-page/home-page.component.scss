@@ -18,7 +18,7 @@
   margin-bottom: 1.7rem;
 
   span {
-    color: #2B7A4D;
+    color: #5f6e2c;
     display: block;
     font-size: .82rem;
     font-weight: 900;
@@ -36,6 +36,14 @@
   }
 }
 
+.fic-section-heading--compact {
+  margin-bottom: 1.1rem;
+
+  h2 {
+    font-size: clamp(1.35rem, 2.1vw, 2rem);
+  }
+}
+
 .fic-feature-grid {
   display: grid;
   gap: 1rem;
@@ -44,7 +52,7 @@
   article {
     background: #fff;
     border: 1px solid rgba(36, 51, 61, .14);
-    border-top: 4px solid #2B7A4D;
+    border-top: 4px solid #5f6e2c;
     min-height: 230px;
     padding: 1.45rem;
     box-shadow: 0 12px 24px rgba(20, 32, 40, .06);
@@ -68,7 +76,7 @@
   align-items: center;
   background: #eef5f1;
   border: 1px solid rgba(43, 122, 77, .24);
-  color: #2B7A4D;
+  color: #5f6e2c;
   display: inline-flex;
   font-size: 1.35rem;
   height: 48px;
@@ -91,11 +99,11 @@
 }
 
 .fic-repository-callout {
-  border-left: 4px solid #2B7A4D;
+  border-left: 4px solid #5f6e2c;
   padding: .5rem 0 .5rem 1.25rem;
 
   span {
-    color: #2B7A4D;
+    color: #5f6e2c;
     display: block;
     font-size: .78rem;
     font-weight: 900;
@@ -128,6 +136,8 @@
 
 .fic-recent-section {
   background: #fff;
+  border-top: 1px solid rgba(36, 51, 61, .08);
+  border-bottom: 1px solid rgba(36, 51, 61, .08);
 }
 
 @include media-breakpoint-down(md) {

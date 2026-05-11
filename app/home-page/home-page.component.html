@@ -28,6 +28,16 @@
     </div>
   </section>
 
+  <section class="fic-recent-section" *ngIf="recentSubmissionspageSize>0">
+    <div class="container">
+      <div class="fic-section-heading fic-section-heading--compact">
+        <span>Novedades</span>
+        <h2>Publicaciones recientes</h2>
+      </div>
+      <ds-recent-item-list></ds-recent-item-list>
+    </div>
+  </section>
+
   <section class="fic-repository-section">
     <div class="container">
       <div class="fic-repository-layout">
@@ -41,12 +51,6 @@
           <ds-themed-top-level-community-list></ds-themed-top-level-community-list>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="fic-recent-section" *ngIf="recentSubmissionspageSize>0">
-    <div class="container">
-      <ds-recent-item-list></ds-recent-item-list>
     </div>
   </section>
 </main>

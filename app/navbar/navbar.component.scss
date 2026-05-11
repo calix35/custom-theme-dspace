@@ -1,9 +1,14 @@
 :host {
   --ds-expandable-navbar-height: auto;
+  --fic-menu-text: #2f3f48;
+  --fic-menu-hover: #0C4467;
+  --fic-menu-accent: #5f6e2c;
+  --fic-menu-bg: #ffffff;
+  --fic-menu-dropdown-border: rgba(36, 51, 61, .12);
 
   nav.navbar {
-    background-color: var(--ds-navbar-bg);
-    align-items: baseline;
+    align-items: center;
+    background-color: var(--fic-menu-bg);
     padding: 0;
   }
 
@@ -11,16 +16,29 @@
   @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
     .navbar {
       width: 100vw;
-      background-color: var(--bs-white);
+      background-color: #fff;
       position: absolute;
       overflow: hidden;
       height: 0;
       z-index: var(--ds-nav-z-index);
+      left: 0;
+      box-shadow: 0 14px 28px rgba(20, 32, 40, .12);
+
       &.open {
         height: auto;
-        min-height: 100vh; //doesn't matter because wrapper is sticky
-        border-bottom: 1px var(--ds-header-navbar-border-bottom-color) solid; // open navbar covers header-navbar-wrapper border
+        min-height: auto;
+        border-bottom: 1px solid var(--fic-menu-dropdown-border);
       }
+    }
+
+    .navbar.navbar-container {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    .navbar:not(.open) {
+      border: 0;
+      box-shadow: none;
     }
   }
 
@@ -48,16 +66,40 @@
     }
 
     .dropdown-menu {
-      padding: 0.5rem !important;
+      border: 1px solid var(--fic-menu-dropdown-border);
+      box-shadow: 0 10px 24px rgba(20, 32, 40, .09);
+      margin-top: .45rem;
+      padding: .4rem !important;
+      border-radius: 0;
     }
 
     .ds-menu-item {
+      border-bottom: 2px solid transparent;
+      color: var(--fic-menu-text);
       display: block;
-      color: var(--ds-navbar-link-color);
-      padding: 0.5rem 0;
+      font-size: .86rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      padding: .82rem .55rem;
+      text-transform: uppercase;
+      transition: color .2s ease, border-color .2s ease;
 
       &:hover, &:focus {
-        color: var(--ds-navbar-link-color-hover);
+        border-color: var(--fic-menu-accent);
+        color: var(--fic-menu-hover);
+      }
+    }
+
+    .dropdown-item {
+      color: var(--fic-menu-text);
+      font-size: .86rem;
+      font-weight: 600;
+      padding: .5rem .7rem;
+
+      &:hover,
+      &:focus {
+        background: #f5faf7;
+        color: var(--fic-menu-hover);
       }
     }
   }
