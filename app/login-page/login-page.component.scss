@@ -1,0 +1,95 @@
+:host {
+  display: block;
+}
+
+.fic-login-page {
+  background: #f7faf8;
+  min-height: calc(100vh - 114px);
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+}
+
+.fic-login-wrap {
+  align-items: stretch;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, .95fr);
+}
+
+.fic-login-brand {
+  background: linear-gradient(140deg, #ffffff 0%, #f0f5f2 100%);
+  border: 1px solid rgba(36, 51, 61, .12);
+  border-left: 4px solid #5f6e2c;
+  box-shadow: 0 12px 24px rgba(20, 32, 40, .06);
+  padding: clamp(1.4rem, 3vw, 2rem);
+
+  h1 {
+    color: #1f2c34;
+    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+    font-weight: 900;
+    line-height: 1.08;
+    margin: 0 0 .8rem;
+  }
+}
+
+.fic-login-kicker {
+  color: #5f6e2c;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  margin: 0 0 .6rem;
+  text-transform: uppercase;
+}
+
+.fic-login-subtitle {
+  color: #4f6069;
+  line-height: 1.6;
+  margin: 0 0 1.2rem;
+}
+
+.fic-login-logo {
+  display: block;
+  max-width: min(100%, 460px);
+  width: 100%;
+}
+
+.fic-login-form {
+  background: #ffffff;
+  border: 1px solid rgba(36, 51, 61, .12);
+  box-shadow: 0 12px 24px rgba(20, 32, 40, .06);
+  padding: clamp(1.2rem, 2.5vw, 1.8rem);
+}
+
+.fic-login-form ::ng-deep {
+  .card {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .card-title {
+    color: #1f2c34;
+    font-weight: 900;
+  }
+
+  .btn-primary {
+    background-color: #5f6e2c;
+    border-color: #5f6e2c;
+    font-weight: 800;
+  }
+
+  a[data-test='register'],
+  a[data-test='forgot'],
+  a[href*='/register'],
+  a[href*='/forgot'] {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
+  .fic-login-page {
+    min-height: calc(100vh - 100px);
+  }
+
+  .fic-login-wrap {
+    grid-template-columns: 1fr;
+  }
+}

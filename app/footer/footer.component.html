@@ -5,24 +5,24 @@
         <section>
           <img src="assets/custom/images/fic-white.png" alt="Siglas FIC">
           <p>
-            Repositorio de la Facultad de Ingenieria y Ciencias de la Universidad Autonoma de Tamaulipas.
+            {{ 'custom.footer.description' | translate }}
           </p>
         </section>
 
         <section>
-          <h2>Contacto</h2>
-          <p>Centro Universitario Victoria</p>
-          <p>Telefono: (834) 318-17-18</p>
-          <p>Correo: fic@uat.edu.mx</p>
+          <h2>{{ 'custom.footer.contact.title' | translate }}</h2>
+          <p>{{ 'custom.footer.contact.campus' | translate }}</p>
+          <p>{{ 'custom.footer.contact.phone' | translate }}</p>
+          <p>{{ 'custom.footer.contact.email' | translate }}</p>
         </section>
 
         <section>
-          <h2>Enlaces</h2>
+          <h2>{{ 'custom.footer.links.title' | translate }}</h2>
           <ul>
-            <li><a routerLink="/community-list">Comunidades</a></li>
-            <li><a routerLink="/search">Busqueda avanzada</a></li>
-            <li><a routerLink="/statistics">Estadisticas</a></li>
-            <li *ngIf="showSendFeedback$ | async"><a routerLink="info/feedback">Comentarios</a></li>
+            <li><a routerLink="/community-list">{{ 'custom.footer.links.communities' | translate }}</a></li>
+            <li><a routerLink="/search">{{ 'custom.footer.links.search' | translate }}</a></li>
+            <li><a routerLink="/statistics">{{ 'custom.footer.links.stats' | translate }}</a></li>
+            <li *ngIf="showSendFeedback$ | async"><a routerLink="info/feedback">{{ 'custom.footer.links.feedback' | translate }}</a></li>
           </ul>
         </section>
       </div>
@@ -31,7 +31,7 @@
 
   <div class="fic-footer__legal">
     <div class="container d-flex flex-wrap align-items-center justify-content-between">
-      <p>© {{ dateObj | date:'y' }} Facultad de Ingenieria y Ciencias, UAT</p>
+      <p>© {{ dateObj | date:'y' }} {{ 'custom.footer.legal.copyright' | translate }}</p>
       <ul>
         <li *ngIf="showCookieSettings">
           <button class="btn btn-link" type="button" (click)="openCookieSettings()">{{ 'footer.link.cookies' | translate}}</button>

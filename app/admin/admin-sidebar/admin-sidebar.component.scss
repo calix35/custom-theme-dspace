@@ -1,5 +1,4 @@
 :host {
-
   /* SIDEBAR SIZE AND POSITION */
 
   /* Sidebar hierarchy:
@@ -16,11 +15,10 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: var(--ds-sidebar-z-index);
+  z-index: calc(var(--ds-sidebar-z-index) + 30);
 
   // Sidebar size and content position
   nav#admin-sidebar {
-
     max-width: var(--ds-admin-sidebar-fixed-element-width); // Sidebar collapsed width
 
     display: flex;
@@ -137,4 +135,5 @@
       }
     }
   }
+
 }

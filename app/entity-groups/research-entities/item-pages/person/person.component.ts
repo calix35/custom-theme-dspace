@@ -12,9 +12,9 @@ import { Context } from '../../../../../../../app/core/shared/context.model';
 @Component({
   selector: 'ds-person',
   // styleUrls: ['./person.component.scss'],
-  styleUrls: ['../../../../../../../app/entity-groups/research-entities/item-pages/person/person.component.scss'],
+  styleUrls: ['./person.component.scss'],
   // templateUrl: './person.component.html',
-  templateUrl: '../../../../../../../app/entity-groups/research-entities/item-pages/person/person.component.html',
+  templateUrl: './person.component.html',
 })
 export class PersonComponent extends BaseComponent {
 }

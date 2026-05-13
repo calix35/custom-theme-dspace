@@ -69,7 +69,7 @@
                        [currentScope]="(currentScope$ | async)"
                        [filters]="filtersRD$.asObservable()"
                        [refreshFilters]="refreshFilters"
-                       [resultCount]="(resultsRD$ | async)?.payload.totalElements"
+                       [resultCount]="(resultsRD$ | async)?.payload?.totalElements"
                        [searchOptions]="(searchOptions$ | async)"
                        [sortOptionsList]="(sortOptionsList$ | async)"
                        [currentSortOption]="(currentSortOptions$ | async)"

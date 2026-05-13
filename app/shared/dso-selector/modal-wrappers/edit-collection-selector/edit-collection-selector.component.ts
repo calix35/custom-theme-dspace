@@ -7,7 +7,7 @@ import {
   selector: 'ds-edit-collection-selector',
   // styleUrls: ['./edit-collection-selector.component.scss'],
   // templateUrl: './edit-collection-selector.component.html',
-  templateUrl: '../../../../../../../app/shared/dso-selector/modal-wrappers/dso-selector-modal-wrapper.component.html',
+  templateUrl: './edit-collection-selector.component.html',
 })
 export class EditCollectionSelectorComponent extends BaseComponent {
 }

@@ -7,9 +7,9 @@ import { fadeIn, fadeInOut } from '../../../../../../../../../app/shared/animati
 @Component({
   selector: 'ds-dynamic-lookup-relation-external-source-tab',
   // styleUrls: ['./dynamic-lookup-relation-external-source-tab.component.scss'],
-  styleUrls: ['../../../../../../../../../app/shared/form/builder/ds-dynamic-form-ui/relation-lookup-modal/external-source-tab/dynamic-lookup-relation-external-source-tab.component.scss'],
+  styleUrls: ['./dynamic-lookup-relation-external-source-tab.component.scss'],
   // templateUrl: './dynamic-lookup-relation-external-source-tab.component.html',
-  templateUrl: '../../../../../../../../../app/shared/form/builder/ds-dynamic-form-ui/relation-lookup-modal/external-source-tab/dynamic-lookup-relation-external-source-tab.component.html',
+  templateUrl: './dynamic-lookup-relation-external-source-tab.component.html',
   providers: [
     {
       provide: SEARCH_CONFIG_SERVICE,

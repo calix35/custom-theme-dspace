@@ -12,9 +12,9 @@ import { Context } from '../../../../../../../app/core/shared/context.model';
 @Component({
   selector: 'ds-journal',
   // styleUrls: ['./journal.component.scss'],
-  styleUrls: ['../../../../../../../app/entity-groups/journal-entities/item-pages/journal/journal.component.scss'],
+  styleUrls: ['./journal.component.scss'],
   // templateUrl: './journal.component.html',
-  templateUrl: '../../../../../../../app/entity-groups/journal-entities/item-pages/journal/journal.component.html',
+  templateUrl: './journal.component.html',
 })
 /**
  * The component for displaying metadata and relations of an item of the type Journal

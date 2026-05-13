@@ -13,3 +13,7 @@
 .dropdown-item {
   cursor: pointer;
 }
+
+:host ::ng-deep .dropdown-menu {
+  z-index: 2500 !important;
+}

@@ -6,7 +6,7 @@
      value: (!(isSidebarVisible$ | async) ? 'hidden' : (slideSidebarOver$ | async) ? 'unpinned' : 'pinned'),
      params: { collapsedWidth: (collapsedSidebarWidth$ | async), expandedWidth: (expandedSidebarWidth$ | async) }
     }">
-  <ds-themed-admin-sidebar [expandedSidebarWidth$]="expandedSidebarWidth$" [collapsedSidebarWidth$]="collapsedSidebarWidth$"></ds-themed-admin-sidebar>
+  <ds-themed-admin-sidebar *ngIf="isAuthenticated$ | async" [expandedSidebarWidth$]="expandedSidebarWidth$" [collapsedSidebarWidth$]="collapsedSidebarWidth$"></ds-themed-admin-sidebar>
   <div class="inner-wrapper">
     <ds-system-wide-alert-banner></ds-system-wide-alert-banner>
     <ds-themed-header-navbar-wrapper></ds-themed-header-navbar-wrapper>

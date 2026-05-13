@@ -15,9 +15,9 @@ import {Context} from '../../../../../../app/core/shared/context.model';
 @Component({
   selector: 'ds-collection-list-element',
   // styleUrls: ['./collection-list-element.component.scss'],
-  styleUrls: ['../../../../../../app/shared/object-list/collection-list-element/collection-list-element.component.scss'],
+  styleUrls: ['./collection-list-element.component.scss'],
   // templateUrl: './collection-list-element.component.html'
-  templateUrl: '../../../../../../app/shared/object-list/collection-list-element/collection-list-element.component.html'
+  templateUrl: './collection-list-element.component.html'
 })
 /**
  * Component representing list element for a collection

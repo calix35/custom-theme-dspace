@@ -8,9 +8,9 @@ import { ObjectListComponent as BaseComponent} from '../../../../../app/shared/o
 @Component({
   selector: 'ds-object-list',
   // styleUrls: ['./object-list.component.scss'],
-  styleUrls: ['../../../../../app/shared/object-list/object-list.component.scss'],
+  styleUrls: ['./object-list.component.scss'],
   // templateUrl: './object-list.component.html'
-  templateUrl: '../../../../../app/shared/object-list/object-list.component.html'
+  templateUrl: './object-list.component.html'
 })
 
 export class ObjectListComponent extends BaseComponent {}

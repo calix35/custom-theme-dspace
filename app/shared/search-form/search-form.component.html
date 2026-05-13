@@ -1,19 +1,46 @@
 <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" action="/search">
-    <div>
-        <div class="form-group input-group">
-            <div *ngIf="showScopeSelector" class="input-group-prepend">
-                <button class="scope-button btn btn-outline-secondary text-truncate"
-                        [ngbTooltip]="dsoNameService.getName(selectedScope | async)" type="button"
-                        (click)="openScopeModal()" role="button" tabindex="0">
-                  {{dsoNameService.getName(selectedScope | async) || ('search.form.scope.all' | translate)}}
-                </button>
-            </div>
-            <input type="text" [(ngModel)]="query" name="query" class="form-control"
-                   attr.aria-label="{{ searchPlaceholder }}" [attr.data-test]="'search-box' | dsBrowserOnly"
-                   [placeholder]="searchPlaceholder">
-            <span class="input-group-append">
-            <button type="submit" class="search-button btn btn-{{brandColor}}" [attr.data-test]="'search-button' | dsBrowserOnly" role="button" tabindex="0"><i class="fas fa-search"></i> {{ ('search.form.search' | translate) }}</button>
-        </span>
-        </div>
+  <div>
+    <div class="form-group input-group">
+      <div *ngIf="showScopeSelector" class="input-group-prepend">
+        <button class="scope-button btn btn-outline-secondary text-truncate"
+                [ngbTooltip]="dsoNameService.getName(selectedScope | async)" type="button"
+                (click)="openScopeModal()" role="button" tabindex="0">
+          {{dsoNameService.getName(selectedScope | async) || ('search.form.scope.all' | translate)}}
+        </button>
+      </div>
+
+      <div class="input-group-prepend fic-field-select-wrap">
+        <label class="sr-only" for="fic-search-field">{{ 'custom.search.field.label' | translate }}</label>
+        <select id="fic-search-field"
+                class="form-control fic-field-select"
+                [(ngModel)]="searchField"
+                name="searchField">
+          <option value="all">{{ 'custom.search.field.all' | translate }}</option>
+          <option value="title">{{ 'custom.search.field.title' | translate }}</option>
+          <option value="subject">{{ 'custom.search.field.subject' | translate }}</option>
+          <option value="author">{{ 'custom.search.field.author' | translate }}</option>
+          <option value="category">{{ 'custom.search.field.category' | translate }}</option>
+          <option value="date">{{ 'custom.search.field.date' | translate }}</option>
+        </select>
+      </div>
+
+      <input type="text"
+             [(ngModel)]="query"
+             name="query"
+             class="form-control fic-search-input"
+             attr.aria-label="{{ searchPlaceholder }}"
+             [attr.data-test]="'search-box' | dsBrowserOnly"
+             [placeholder]="searchPlaceholder">
+
+      <span class="input-group-append">
+        <button type="submit"
+                class="search-button btn btn-{{brandColor}}"
+                [attr.data-test]="'search-button' | dsBrowserOnly"
+                role="button"
+                tabindex="0">
+          <i class="fas fa-search"></i><span class="fic-search-btn-text"> {{ ('search.form.search' | translate) }}</span>
+        </button>
+      </span>
     </div>
+  </div>
 </form>

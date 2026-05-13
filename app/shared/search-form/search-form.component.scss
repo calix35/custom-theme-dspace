@@ -1,4 +1,3 @@
-// temporary fix for bootstrap 4 beta btn color issue
 .btn-secondary {
   background-color: var(--bs-input-bg);
   color: var(--bs-input-color);
@@ -6,4 +5,77 @@
 
 .scope-button {
   max-width: var(--ds-search-form-scope-max-width);
+}
+
+.fic-field-select-wrap {
+  min-width: 152px;
+  flex: 0 0 152px;
+}
+
+.fic-field-select {
+  appearance: none;
+  background-color: rgba(95, 110, 44, .14);
+  background-image: linear-gradient(45deg, transparent 50%, #4f5c25 50%), linear-gradient(135deg, #4f5c25 50%, transparent 50%);
+  background-position: calc(100% - 14px) calc(50% - 1px), calc(100% - 9px) calc(50% - 1px);
+  background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px;
+  border: 1px solid rgba(95, 110, 44, .35);
+  border-right: 0;
+  border-radius: 0;
+  color: #2f3f48;
+  height: auto;
+  max-width: 152px;
+  width: 152px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  padding-left: .55rem;
+  padding-right: 1.45rem;
+}
+
+.fic-search-input {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.search-button {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, sm)-0.02) {
+  .fic-field-select-wrap {
+    min-width: 148px;
+    width: 148px;
+    flex: 0 0 148px;
+  }
+
+  .fic-field-select {
+    border-right: 0;
+    max-width: 148px;
+    width: 148px;
+    font-size: .76rem;
+    padding-left: .45rem;
+    padding-right: 1rem;
+  }
+
+  .fic-search-input {
+    flex: 1 1 80px;
+    width: 1%;
+  }
+
+  .search-button {
+    min-width: 44px;
+    padding-left: .65rem;
+    padding-right: .65rem;
+  }
+
+  .fic-search-btn-text {
+    display: none;
+  }
+
+  .input-group {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
 }

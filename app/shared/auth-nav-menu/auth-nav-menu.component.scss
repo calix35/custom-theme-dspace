@@ -1,10 +1,15 @@
-#loginDropdownMenu, #logoutDropdownMenu {
+#loginDropdownMenu, #logoutDropdownMenu, #loginDropdownMenuMobile, #logoutDropdownMenuMobile {
   min-width: 330px;
-  z-index: 1002;
+  z-index: 2400 !important;
 }
 
 #loginDropdownMenu {
   min-height: 75px;
+}
+
+#loginDropdownMenuMobile {
+  min-width: 280px;
+  max-width: min(340px, calc(100vw - 1.25rem));
 }
 
 .dropdown-item.active, .dropdown-item:active,
@@ -31,6 +36,63 @@
 
 .dropdown-toggle::after {
   margin-left: 0;
+}
+
+.logoutDesktop {
+  align-items: center;
+  display: inline-flex;
+  font-weight: 700;
+  gap: .3rem;
+  text-decoration: none;
+}
+
+.logoutDesktop__label {
+  font-size: .85rem;
+  text-transform: uppercase;
+}
+
+.logoutDesktopBtn {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: .82rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: .15rem .3rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: #d4d7d9;
+    outline: none;
+  }
+}
+
+.mobileAuthAction {
+  align-items: center;
+  color: #f5f5f5;
+  display: inline-flex;
+  line-height: 1;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #d4d7d9;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
+  #loginDropdownMenuMobile {
+    left: .5rem !important;
+    right: auto !important;
+  }
 }
 
 #loginDropdownMenu {

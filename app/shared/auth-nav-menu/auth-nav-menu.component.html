@@ -1,8 +1,9 @@
 <div class="navbar-nav mr-auto" *ngIf="!(isMobile$ | async); else mobileButtons" data-test="auth-nav">
-  <div *ngIf="!(isAuthenticated$ | async) && showAuth$ | async"
+  <div *ngIf="!(isAuthenticated$ | async)"
        class="nav-item"
        (click)="$event.stopPropagation();">
     <div ngbDropdown #loginDrop="ngbDropdown" display="dynamic" placement="bottom-right" class="d-inline-block"
+         container="body"
          @fadeInOut>
       <button class="dropdownLogin btn btn-link px-0" [attr.aria-label]="'nav.login' |translate"
               (click)="$event.preventDefault()" [attr.data-test]="'login-menu' | dsBrowserOnly"
@@ -23,37 +24,36 @@
       </div>
     </div>
   </div>
-  <div *ngIf="(isAuthenticated$ | async) && showAuth$ | async" class="nav-item">
-    <div ngbDropdown display="dynamic" placement="bottom-right" class="d-inline-block" @fadeInOut>
-      <button
-        role="button"
-        tabindex="0"
-        [attr.aria-label]="'nav.user-profile-menu-and-logout' | translate"
-        aria-controls="user-menu-dropdown"
-        (click)="$event.preventDefault()" [title]="'nav.user-profile-menu-and-logout' | translate"
-        class="dropdownLogout btn btn-link px-0"
-        [attr.data-test]="'user-menu' | dsBrowserOnly"
-        ngbDropdownToggle>
-        <i class="fas fa-user-circle fa-lg fa-fw"></i></button>
-      <div id="logoutDropdownMenu" ngbDropdownMenu>
-        <ds-user-menu [inExpandableNavbar]="false"></ds-user-menu>
-      </div>
+  <div *ngIf="(isAuthenticated$ | async)" class="nav-item" @fadeInOut>
+    <div class="d-inline-flex align-items-center mr-2">
+      <button class="logoutDesktopBtn" type="button" (click)="doLogout()" data-test="topbar-log-out">
+        <i class="fas fa-sign-out-alt mr-1"></i>{{ 'logout.form.submit' | translate }}
+      </button>
     </div>
   </div>
 </div>
 <ng-template #mobileButtons>
-  <div data-test="auth-nav">
-    <a *ngIf="!(isAuthenticated$ | async)" routerLink="/login" routerLinkActive="active" class="loginLink px-0.5"
-       role="link"
-       tabindex="0">
-      {{ 'nav.login' | translate }}<span class="sr-only">(current)</span>
-    </a>
-    <a *ngIf="(isAuthenticated$ | async)" role="link" [attr.aria-label]="'nav.logout' |translate"
-       [title]="'nav.logout' | translate" routerLink="/logout" routerLinkActive="active" class="logoutLink px-1"
-       tabindex="0">
-      <i class="fas fa-sign-out-alt fa-lg fa-fw"></i>
-      <span class="sr-only">(current)</span>
-    </a>
+  <div data-test="auth-nav" class="d-inline-flex align-items-center">
+    <div *ngIf="!(isAuthenticated$ | async)"
+         class="nav-item"
+         (click)="$event.stopPropagation();">
+      <a class="mobileAuthAction btn btn-link px-0"
+         [attr.aria-label]="'nav.login' | translate"
+         [attr.data-test]="'login-menu-mobile' | dsBrowserOnly"
+         [routerLink]="['/login']"
+         role="button"
+         tabindex="0">
+        <i class="fas fa-user-lock fa-lg"></i>
+      </a>
+    </div>
+
+    <div *ngIf="(isAuthenticated$ | async)" class="nav-item">
+      <div class="d-inline-flex align-items-center mr-2">
+        <button class="logoutDesktopBtn" type="button" (click)="doLogout()" data-test="topbar-log-out-mobile">
+          <i class="fas fa-sign-out-alt mr-1"></i>{{ 'logout.form.submit' | translate }}
+        </button>
+      </div>
+    </div>
   </div>
 </ng-template>
 

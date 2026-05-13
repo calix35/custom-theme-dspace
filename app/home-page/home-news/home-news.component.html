@@ -4,25 +4,25 @@
   </div>
   <div class="container fic-hero__content">
     <div class="fic-hero__copy">
-      <p class="fic-hero__eyebrow">Universidad Autonoma de Tamaulipas</p>
-      <h1>Repositorio Institucional FIC</h1>
+      <p class="fic-hero__eyebrow">{{ 'custom.home.hero.uat' | translate }}</p>
+      <h1>{{ 'custom.home.hero.title' | translate }}</h1>
       <p class="fic-hero__lead">
-        Preserva, consulta y difunde la produccion academica, cientifica y tecnologica de la Facultad de Ingenieria y Ciencias.
+        {{ 'custom.home.hero.description' | translate }}
       </p>
     </div>
     <div class="fic-hero__search">
-      <span class="fic-hero__search-label">Buscar en el repositorio</span>
+      <span class="fic-hero__search-label">{{ 'custom.home.hero.search.label' | translate }}</span>
       <ds-themed-search-form [inPlaceSearch]="false" [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-themed-search-form>
     </div>
   </div>
 </section>
 
-<nav class="fic-shortcuts" aria-label="Accesos rapidos">
+<nav class="fic-shortcuts" [attr.aria-label]="'custom.home.shortcuts.aria' | translate">
   <div class="container">
-    <a routerLink="/community-list"><span class="fas fa-sitemap" aria-hidden="true"></span>Comunidades</a>
-    <a routerLink="/search"><span class="fas fa-flask" aria-hidden="true"></span>Produccion cientifica</a>
-    <a routerLink="/browse/title"><span class="fas fa-book-open" aria-hidden="true"></span>Titulos</a>
-    <a routerLink="/browse/dateissued"><span class="far fa-calendar-alt" aria-hidden="true"></span>Fecha de publicacion</a>
-    <a routerLink="/statistics"><span class="fas fa-chart-line" aria-hidden="true"></span>Estadisticas</a>
+    <a routerLink="/community-list"><span class="fas fa-sitemap" aria-hidden="true"></span>{{ 'custom.home.shortcuts.communities' | translate }}</a>
+    <a routerLink="/search"><span class="fas fa-flask" aria-hidden="true"></span>{{ 'custom.home.shortcuts.research' | translate }}</a>
+    <a routerLink="/browse/title"><span class="fas fa-book-open" aria-hidden="true"></span>{{ 'custom.home.shortcuts.titles' | translate }}</a>
+    <a routerLink="/browse/dateissued"><span class="far fa-calendar-alt" aria-hidden="true"></span>{{ 'custom.home.shortcuts.date' | translate }}</a>
+    <a routerLink="/statistics"><span class="fas fa-chart-line" aria-hidden="true"></span>{{ 'custom.home.shortcuts.stats' | translate }}</a>
   </div>
 </nav>

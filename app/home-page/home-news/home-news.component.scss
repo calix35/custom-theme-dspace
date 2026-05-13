@@ -75,7 +75,7 @@ h1 {
   border-top: 4px solid #5f6e2c;
   box-shadow: 0 14px 30px rgba(23, 35, 46, .08);
   margin-top: 2.3rem;
-  max-width: 810px;
+  max-width: 100%;
   padding: 1.05rem;
 
   :host ::ng-deep & {
@@ -166,19 +166,13 @@ h1 {
 
     :host ::ng-deep & {
       .input-group {
-        display: grid;
-        gap: .7rem;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0;
       }
 
-      .form-control,
-      .input-group-append,
-      .search-button {
-        display: block;
-        width: 100%;
-      }
-
-      .input-group-append {
-        margin-left: 0;
+      .form-control {
+        width: auto;
       }
     }
   }

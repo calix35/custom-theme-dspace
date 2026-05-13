@@ -5,7 +5,7 @@ import { fadeIn, fadeInOut } from '../../../../../../app/shared/animations/fade'
 @Component({
   selector: 'ds-search-results',
   // templateUrl: './search-results.component.html',
-  templateUrl: '../../../../../../app/shared/search/search-results/search-results.component.html',
+  templateUrl: './search-results.component.html',
   // styleUrls: ['./search-results.component.scss'],
   animations: [
     fadeIn,

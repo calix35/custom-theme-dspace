@@ -12,9 +12,9 @@ import { Context } from '../../../../../../../app/core/shared/context.model';
 @Component({
   selector: 'ds-journal-volume',
   // styleUrls: ['./journal-volume.component.scss'],
-  styleUrls: ['../../../../../../../app/entity-groups/journal-entities/item-pages/journal-volume/journal-volume.component.scss'],
+  styleUrls: ['./journal-volume.component.scss'],
   // templateUrl: './journal-volume.component.html',
-  templateUrl: '../../../../../../../app/entity-groups/journal-entities/item-pages/journal-volume/journal-volume.component.html',
+  templateUrl: './journal-volume.component.html',
 })
 /**
  * The component for displaying metadata and relations of an item of the type Journal Volume

@@ -4,25 +4,25 @@
   <section class="fic-intro-section">
     <div class="container">
       <div class="fic-section-heading">
-        <span>Repositorio academico</span>
-        <h2>Investigacion, docencia y conocimiento abierto de la FIC</h2>
+        <span>{{ 'custom.home.intro.kicker' | translate }}</span>
+        <h2>{{ 'custom.home.intro.title' | translate }}</h2>
       </div>
 
       <div class="fic-feature-grid">
         <article>
           <span class="fic-feature-icon fas fa-seedling" aria-hidden="true"></span>
-          <h3>Ciencias agropecuarias y ambientales</h3>
-          <p>Organiza materiales vinculados con sistemas productivos, conservacion ambiental y desarrollo sostenible.</p>
+          <h3>{{ 'custom.home.feature.agro.title' | translate }}</h3>
+          <p>{{ 'custom.home.feature.agro.description' | translate }}</p>
         </article>
         <article>
           <span class="fic-feature-icon fas fa-network-wired" aria-hidden="true"></span>
-          <h3>Tecnologia, telematica y datos</h3>
-          <p>Da visibilidad a proyectos, tesis, articulos y recursos academicos de las areas tecnologicas de la Facultad.</p>
+          <h3>{{ 'custom.home.feature.tech.title' | translate }}</h3>
+          <p>{{ 'custom.home.feature.tech.description' | translate }}</p>
         </article>
         <article>
           <span class="fic-feature-icon fas fa-university" aria-hidden="true"></span>
-          <h3>Memoria institucional</h3>
-          <p>Conserva y facilita el acceso a la produccion intelectual de estudiantes, docentes e investigadores.</p>
+          <h3>{{ 'custom.home.feature.memory.title' | translate }}</h3>
+          <p>{{ 'custom.home.feature.memory.description' | translate }}</p>
         </article>
       </div>
     </div>
@@ -31,8 +31,8 @@
   <section class="fic-recent-section" *ngIf="recentSubmissionspageSize>0">
     <div class="container">
       <div class="fic-section-heading fic-section-heading--compact">
-        <span>Novedades</span>
-        <h2>Publicaciones recientes</h2>
+        <span>{{ 'custom.home.recent.kicker' | translate }}</span>
+        <h2>{{ 'custom.home.recent.title' | translate }}</h2>
       </div>
       <ds-recent-item-list></ds-recent-item-list>
     </div>
@@ -42,10 +42,10 @@
     <div class="container">
       <div class="fic-repository-layout">
         <aside class="fic-repository-callout">
-          <span>Explora</span>
-          <h2>Comunidades del repositorio</h2>
-          <p>Consulta las colecciones disponibles y navega los contenidos por comunidades academicas.</p>
-          <a class="btn btn-primary" routerLink="/community-list">Ver comunidades</a>
+          <span>{{ 'custom.home.communities.kicker' | translate }}</span>
+          <h2>{{ 'custom.home.communities.title' | translate }}</h2>
+          <p>{{ 'custom.home.communities.description' | translate }}</p>
+          <a class="btn btn-primary" routerLink="/community-list">{{ 'custom.home.communities.cta' | translate }}</a>
         </aside>
         <div class="fic-repository-content">
           <ds-themed-top-level-community-list></ds-themed-top-level-community-list>

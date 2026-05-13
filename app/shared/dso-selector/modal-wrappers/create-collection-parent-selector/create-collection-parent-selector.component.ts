@@ -7,7 +7,7 @@ import {
   selector: 'ds-create-collection-parent-selector',
   // styleUrls: ['./create-collection-parent-selector.component.scss'],
   // templateUrl: './create-collection-parent-selector.component.html',
-  templateUrl: '../../../../../../../app/shared/dso-selector/modal-wrappers/dso-selector-modal-wrapper.component.html',
+  templateUrl: './create-collection-parent-selector.component.html',
 })
 export class CreateCollectionParentSelectorComponent extends BaseComponent {
 }

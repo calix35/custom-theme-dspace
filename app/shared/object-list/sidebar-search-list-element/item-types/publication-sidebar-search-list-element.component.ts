@@ -14,7 +14,7 @@ import {
 @Component({
   selector: 'ds-publication-sidebar-search-list-element',
   // templateUrl: './publication-sidebar-search-list-element.component.html',
-  templateUrl: '../../../../../../../app/shared/object-list/sidebar-search-list-element/sidebar-search-list-element.component.html',
+  templateUrl: './publication-sidebar-search-list-element.component.html',
 })
 export class PublicationSidebarSearchListElementComponent extends BaseComponent {
 }

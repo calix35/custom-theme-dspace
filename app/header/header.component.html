@@ -1,13 +1,13 @@
 <header id="fic-site-header">
   <div class="fic-topbar">
     <div class="container d-flex align-items-center justify-content-between">
+      <div class="fic-top-logos" routerLink="/home" [attr.aria-label]="'home.title' | translate" role="button" tabindex="0">
+        <img src="assets/custom/images/uat-white.png" alt="UAT" class="fic-top-logo">
+        <img src="assets/custom/images/fic-white.png" alt="FIC" class="fic-top-logo">
+      </div>
       <div class="fic-top-actions d-flex align-items-center">
         <ds-themed-lang-switch></ds-themed-lang-switch>
         <ds-themed-auth-nav-menu></ds-themed-auth-nav-menu>
-      </div>
-      <div class="fic-top-logos" routerLink="/home" [attr.aria-label]="'home.title' | translate" role="button" tabindex="0">
-        <img src="assets/custom/images/fic-white.png" alt="FIC" class="fic-top-logo">
-        <img src="assets/custom/images/uat-white.png" alt="UAT" class="fic-top-logo">
       </div>
     </div>
   </div>
